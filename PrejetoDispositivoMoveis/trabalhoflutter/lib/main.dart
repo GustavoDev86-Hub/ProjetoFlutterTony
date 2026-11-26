@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/filme_card.dart';
 import 'package:trabalhoflutter/supabase_config.dart';
+import 'admin.dart';
 
 void main() {
   runApp(const DicasDeFilmesApp());
@@ -66,15 +67,23 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF121212),
-        title: const Text(
-          '🎬 Dicas de Filmes',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
+  title: const Text('Dicas de Filmes'),
+  actions: [
+    IconButton(
+      icon: const Icon(Icons.admin_panel_settings),
+      tooltip: 'Painel administrativo',
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const AdminPage(),
           ),
-        ),
-        centerTitle: true,
-      ),
+        );
+      },
+    ),
+  ],
+),
+    
 
       body: ListView(
         padding: const EdgeInsets.all(16),
