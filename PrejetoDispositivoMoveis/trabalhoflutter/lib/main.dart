@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/filme_card.dart';
+import 'package:trabalhoflutter/supabase_config.dart';
 
 void main() {
   runApp(const DicasDeFilmesApp());
@@ -53,6 +54,13 @@ class HomePage extends StatelessWidget {
         'imagem': 'https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg',
         'avaliacao': 9.2,
         'comentario': 'Um filme que faz você pensar até depois dos créditos!'
+      },
+      {
+        'titulo': 'Titanic',
+        'sinopse': 'filme épico de romance, drama e desastre escrito e dirigido por James Cameron, que mistura ficção e fatos reais sobre o naufrágio do RMS Titanic em abril de 1912',
+        'imagem': 'https://upload.wikimedia.org/wikipedia/pt/2/22/Titanic_poster.jpg?utm_source=pt.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled',
+        'avaliacao': 9.1,
+        'comentario': 'Um filme apaixonante atemporal'
       },
     ];
 
